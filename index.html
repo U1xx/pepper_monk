@@ -13,8 +13,8 @@
   <link rel="stylesheet" href="css/style.css">
 
   <script>
-    var schema = 'https://moongift.s3.amazonaws.com/square_demo/index.html';
-    var client_id = 'sq0idp-CXMf_N4EyyjHL_rn9t2ehg';
+    var schema = 'https://u1xx.github.io/pepper_monk/index.html';
+    var client_id = 'sq0idp-IJLseLalR4kmxF80yM_nDw';
     var userAgent = navigator.userAgent || navigator.vendor || window.opera;
     var android = /android/i.test(userAgent);
     var ios = (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream);
@@ -70,7 +70,7 @@
         if (ios) {
           var dataParameter = {
             "amount_money": {
-              "amount" : "100",
+              "amount" : "300",
               "currency_code" : "JPY"
             },
             "callback_url" : schema, // Replace this value with your application's callback URL
@@ -91,10 +91,10 @@
 <body>
   <ons-page id="helloworld-page">
     <ons-toolbar>
-      <div class="center">Square APIデモ</div>
+      <div class="center">ペッパー坊主おみくじ</div>
     </ons-toolbar>
     <p>
-      <ons-button modifier="large" id="square">100円支払う</ons-button>
+      <ons-button modifier="large" id="square">お布施を納める(\300-)</ons-button>
     </p>
     <p>
       <ons-list>
