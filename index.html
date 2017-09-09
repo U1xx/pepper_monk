@@ -49,7 +49,7 @@
             "S.com.squareup.pos.CLIENT_ID": client_id,
             "S.com.squareup.pos.API_VERSION": 'v1.3',
             "S.com.squareup.pos.CURRENCY_CODE": "JPY",
-            "i.com.squareup.pos.TOTAL_AMOUNT": "100",
+            "i.com.squareup.pos.TOTAL_AMOUNT": "300",
             "S.com.squareup.pos.TENDER_TYPES": [
               "com.squareup.pos.TENDER_CARD",
               "com.squareup.pos.TENDER_CARD_ON_FILE",
@@ -82,6 +82,7 @@
             }
           };
           var uri = "square-commerce-v1://payment/create?data=" + encodeURIComponent(JSON.stringify(dataParameter));
+		  alert(uri);
           location.href = uri;
         }
       });
