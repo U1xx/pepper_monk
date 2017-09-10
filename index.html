@@ -47,11 +47,13 @@
       }
     });
 
+    ons.ready(function() {
+	
     $('#omikuji').on('click', function(e) {
        $.get("http://www.livlog.xyz/ma2017_fukui/setOmikuji", {omikuji:"1"});
     });
     
-    ons.ready(function() {
+
       $('#square').on('click', function(e) {
         e.preventDefault();
         var userAgent = navigator.userAgent || navigator.vendor || window.opera;
