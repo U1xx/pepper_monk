@@ -36,7 +36,12 @@
           `);
           if (param.status == 'ok') {
             $.get("http://www.livlog.xyz/ma2017_fukui/setOmikuji?omikuji=1");
-            console.error("get url");
+          $('#result').html(`
+            <ons-list-item>結果ID : ${param.status}</ons-list-item>
+            <ons-list-item>トランザクションID : ${param.transaction_id}</ons-list-item>
+			<ons-list-item>クライアントトランザクションID : ${param.client_transaction_id}</ons-list-item>
+			
+            <ons-list-item>結果ID : 送信完了！</ons-list-item>
           }
         }
       }
