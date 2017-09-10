@@ -50,7 +50,7 @@
     ons.ready(function() {
 	
     $('#omikuji').on('click', function(e) {
-       $.get("http://www.livlog.xyz/ma2017_fukui/setOmikuji", {omikuji:"1"});
+       $.post("http://www.livlog.xyz/ma2017_fukui/setOmikuji", {omikuji:"1"});
     });
     
 
