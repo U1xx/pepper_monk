@@ -47,6 +47,9 @@
       }
     });
 
+    $('#omikuji').on('click', function(e) {
+       $.get("http://www.livlog.xyz/ma2017_fukui/setOmikuji", {omikuji:"1"});
+    });
     
     ons.ready(function() {
       $('#square').on('click', function(e) {
@@ -95,14 +98,6 @@
           location.href = uri;
         }
       });
-	  
-	  
-      $('#omikuji').on('click', function(e) {
-        $.get("http://www.livlog.xyz/ma2017_fukui/setOmikuji", {omikuji:"1"});
-        $('#result').html(`
-          <ons-list-item>送信結果 : 送信完了！</ons-list-item>
-        `);
-      }); 
     });
   </script>
 </head>
