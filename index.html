@@ -29,19 +29,19 @@
         }
         if (ios) {
           var param = JSON.parse(decodeURIComponent(location.search.replace('?data=', '')));
-          $('#result').html('
+          $('#result').html(`
             <ons-list-item>結果ID : ${param.status}</ons-list-item>
             <ons-list-item>トランザクションID : ${param.transaction_id}</ons-list-item>
             <ons-list-item>クライアントトランザクションID : ${param.client_transaction_id}</ons-list-item>
-          ');
+          `);
             $.get("http://www.livlog.xyz/ma2017_fukui/setOmikuji", {omikuji:"1"});
           if (param.status == 'ok') {
-          $('#result').html('
+          $('#result').html(`
             <ons-list-item>結果ID : ${param.status}</ons-list-item>
             <ons-list-item>トランザクションID : ${param.transaction_id}</ons-list-item>
             <ons-list-item>クライアントトランザクションID : ${param.client_transaction_id}</ons-list-item>
             <ons-list-item>送信結果 : 送信完了！</ons-list-item>
-          ');
+          `);
           }
         }
       }
@@ -99,9 +99,9 @@
 	  
       $('#omikuji').on('click', function(e) {
         $.get("http://www.livlog.xyz/ma2017_fukui/setOmikuji", {omikuji:"1"});
-        $('#result').html('
+        $('#result').html(`
           <ons-list-item>送信結果 : 送信完了！</ons-list-item>
-        ');
+        `);
       }); 
     });
   </script>
