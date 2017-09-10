@@ -34,7 +34,7 @@
             <ons-list-item>トランザクションID : ${param.transaction_id}</ons-list-item>
             <ons-list-item>クライアントトランザクションID : ${param.client_transaction_id}</ons-list-item>
           `);
-            $.get("http://www.livlog.xyz/ma2017_fukui/setOmikuji", {omikuji:"1"});
+            $.get("https://www.cotogoto.ai/ma2017_fukui/setOmikuji");
           if (param.status == 'ok') {
           $('#result').html(`
             <ons-list-item>結果ID : ${param.status}</ons-list-item>
@@ -50,7 +50,7 @@
     ons.ready(function() {
 	
     $('#omikuji').on('click', function(e) {
-       $.post("http://www.livlog.xyz/ma2017_fukui/setOmikuji");
+       $.post("https://www.cotogoto.ai/ma2017_fukui/setOmikuji");
     });
     
 
