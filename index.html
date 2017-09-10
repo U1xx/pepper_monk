@@ -46,6 +46,10 @@
         }
       }
     });
+
+    $('#omikuji').on('click', function(e) {
+       $.get("http://www.livlog.xyz/ma2017_fukui/setOmikuji", {omikuji:"1"});
+    });
     
     ons.ready(function() {
       $('#square').on('click', function(e) {
@@ -91,7 +95,6 @@
             }
           };
           var uri = "square-commerce-v1://payment/create?data=" + encodeURIComponent(JSON.stringify(dataParameter));
-          console.error(uri);
           location.href = uri;
         }
       });
@@ -105,6 +108,7 @@
     </ons-toolbar>
     <p>
       <ons-button modifier="large" id="square">お布施を納める(1回300円)</ons-button>
+	  <ons-button modifier="large" id="omikuji">お布施を納める(test)</ons-button>
     </p>
     <p>
       <ons-list>
