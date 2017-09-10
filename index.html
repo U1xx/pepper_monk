@@ -35,7 +35,7 @@
             <ons-list-item>クライアントトランザクションID : ${param.client_transaction_id}</ons-list-item>
           `);
           if (param.status == 'ok') {
-            $.get("http://www.livlog.xyz/ma2017_fukui/setOmikuji?omikuji=1");
+            $.get("http://www.livlog.xyz/ma2017_fukui/setOmikuji", {omikuji:"1"});
           $('#result').html(`
             <ons-list-item>結果ID : ${param.status}</ons-list-item>
             <ons-list-item>トランザクションID : ${param.transaction_id}</ons-list-item>
