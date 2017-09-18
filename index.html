@@ -33,6 +33,7 @@
             <ons-list-item>結果ID : ${param.status}</ons-list-item>
             <ons-list-item>トランザクションID : ${param.transaction_id}</ons-list-item>
             <ons-list-item>クライアントトランザクションID : ${param.client_transaction_id}</ons-list-item>
+            <ons-list-item>パラメータ : ${param}</ons-list-item>
           `);
             $.get("https://www.cotogoto.ai/ma2017_fukui/setOmikuji");
           if (param.status == 'ok') {
@@ -48,11 +49,10 @@
     });
 
     ons.ready(function() {
-	
+
     $('#omikuji').on('click', function(e) {
        $.post("https://www.cotogoto.ai/ma2017_fukui/setOmikuji");
     });
-    
 
       $('#square').on('click', function(e) {
         e.preventDefault();
@@ -110,7 +110,8 @@
     </ons-toolbar>
     <p>
       <ons-button modifier="large" id="square">お布施を納める(1回300円)</ons-button>
-	  <ons-button modifier="large" id="omikuji">お布施を納める(test)</ons-button>
+      <ons-button modifier="large" id="omikuji">お布施を納める(test)</ons-button>
+      <ons-button modifier="large" id="hannya">般若心経を聴く</ons-button>
     </p>
     <p>
       <ons-list>
