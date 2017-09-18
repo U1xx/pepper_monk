@@ -29,6 +29,7 @@
         }
         if (ios) {
           var param = JSON.parse(decodeURIComponent(location.search.replace('?data=', '')));
+          var res = JSON.stringify(decodeURIComponent(location.search.replace('?data=', '')),null,'\t') ;
           $('#result').html(`
             <ons-list-item>結果ID : ${param.status}</ons-list-item>
             <ons-list-item>トランザクションID : ${param.transaction_id}</ons-list-item>
@@ -42,7 +43,7 @@
             <ons-list-item>トランザクションID : ${param.transaction_id}</ons-list-item>
             <ons-list-item>クライアントトランザクションID : ${param.client_transaction_id}</ons-list-item>
             <ons-list-item>送信結果 : 送信完了！</ons-list-item>
-            <ons-list-item>パラメータ : ' + JSON.stringify(decodeURIComponent(location.search.replace('?data=', '')),null,'\t') + '</ons-list-item>
+            <ons-list-item>パラメータ : ' + res + '</ons-list-item>
           `);
           }
         }
