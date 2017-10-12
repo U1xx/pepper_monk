@@ -44,8 +44,10 @@
             <ons-list-item>クライアントトランザクションID : ${param.client_transaction_id}</ons-list-item>
             <ons-list-item>備考 : ${param}</ons-list-item>
             <ons-list-item>送信結果 : 送信完了！</ons-list-item>
-            <ons-list-item>パラメータ : ' + res + '</ons-list-item>
           `);
+            for (key in param) {
+                alert("<ons-list-item>結果ID : " + param[key] + "</ons-list-item>");
+            }
           }
         }
       }
