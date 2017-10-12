@@ -34,7 +34,6 @@
             <ons-list-item>結果ID : ${param.status}</ons-list-item>
             <ons-list-item>トランザクションID : ${param.transaction_id}</ons-list-item>
             <ons-list-item>クライアントトランザクションID : ${param.client_transaction_id}</ons-list-item>
-            <ons-list-item>パラメータ : ${param}</ons-list-item>
           `);
             $.get("https://www.cotogoto.ai/ma2017_fukui/setOmikuji");
           if (param.status == 'ok') {
@@ -42,7 +41,6 @@
             <ons-list-item>結果ID : ${param.status}</ons-list-item>
             <ons-list-item>トランザクションID : ${param.transaction_id}</ons-list-item>
             <ons-list-item>クライアントトランザクションID : ${param.client_transaction_id}</ons-list-item>
-            <ons-list-item>備考 : ${param}</ons-list-item>
             <ons-list-item>送信結果 : 送信完了！</ons-list-item>
           `);
             for (key in param) {
@@ -93,7 +91,7 @@
             "callback_url" : schema, // Replace this value with your application's callback URL
             "client_id" : client_id, // Replace this value with your application's ID
             "version": "1.3",
-            "notes": "notes for the transaction",
+            "notes": "1 Omikuji",
             "options" : {
               "supported_tender_types" : ["CREDIT_CARD","CASH","OTHER","SQUARE_GIFT_CARD","CARD_ON_FILE"]
             }
@@ -139,7 +137,7 @@
             "callback_url" : schema, // Replace this value with your application's callback URL
             "client_id" : client_id, // Replace this value with your application's ID
             "version": "1.3",
-            "notes": "notes for the transaction",
+            "notes": "11 Omikuji",
             "options" : {
               "supported_tender_types" : ["CREDIT_CARD","CASH","OTHER","SQUARE_GIFT_CARD","CARD_ON_FILE"]
             }
@@ -157,10 +155,9 @@
       <div class="center">ペッパー坊主おみくじ</div>
     </ons-toolbar>
     <p>
-      <ons-button modifier="large" id="square">お布施を納める(1回100円)</ons-button>
+      <ons-button modifier="large" id="square">御神籤を引く(1回100円)</ons-button>
+      <ons-button modifier="large" id="omikuji11">11連御神籤を引く(1回1000円)</ons-button>
       <ons-button modifier="large" id="omikuji">お布施を納める(test)</ons-button>
-      <ons-button modifier="large" id="omikuji11">お布施を納める(11回1000円)</ons-button>
-      <ons-button modifier="large" id="hannya">般若心経を聴く</ons-button>
     </p>
     <p>
       <ons-list>
