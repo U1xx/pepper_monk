@@ -1,12 +1,2 @@
 /**/
-.square img {
-    position: absolute;
-    width: auto;
-    height: auto;
-    min-width: 100%;
-    min-height: 100%;
-    left: 50%;
-    top: 50%;
-    -webkit-transform: translate3d(-50%, -50%, 0);
-            transform: translate3d(-50%, -50%, 0);
-}
+
