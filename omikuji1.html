@@ -31,18 +31,14 @@
           var param = JSON.parse(decodeURIComponent(location.search.replace('?data=', '')));
           var res = JSON.stringify(decodeURIComponent(location.search.replace('?data=', '')),null,'\t') ;
           $('#result').html(`
-            <ons-list-item>結果ID : ${param.status}</ons-list-item>
-            <ons-list-item>トランザクションID : ${param.transaction_id}</ons-list-item>
-            <ons-list-item>クライアントトランザクションID : ${param.client_transaction_id}</ons-list-item>
+            <ons-list-item>おみくじ！</ons-list-item>
+            <ons-list-item>おみくじ結果はpepperから聞いてね！！</ons-list-item>
           `);
             $.get("https://www.cotogoto.ai/ma2017_fukui/setOmikuji");
           if (param.status == 'ok') {
           $('#result').html(`
-            <ons-list-item>御神籤１回！</ons-list-item>
-            <ons-list-item>結果ID : ${param.status}</ons-list-item>
-            <ons-list-item>トランザクションID : ${param.transaction_id}</ons-list-item>
-            <ons-list-item>クライアントトランザクションID : ${param.client_transaction_id}</ons-list-item>
-            <ons-list-item>送信結果 : 送信完了！</ons-list-item>
+            <ons-list-item>おみくじ！</ons-list-item>
+            <ons-list-item>おみくじ結果はpepperから聞いてね！！</ons-list-item>
           `);
             for (key in param) {
                 alert(key + " : " + param[key]);
@@ -155,14 +151,16 @@
     <ons-toolbar>
       <div class="center">ペッパー坊主おみくじ</div>
     </ons-toolbar>
+<!--
     <p>
       <ons-button modifier="large" id="square">御神籤を引く(1回100円)</ons-button>
       <ons-button modifier="large" id="omikuji11">11連御神籤を引く(1回1000円)</ons-button>
       <ons-button modifier="large" id="omikuji">お布施を納める(test)</ons-button>
     </p>
+-->
     <p>
       <ons-list>
-        <ons-list-header>結果</ons-list-header>
+        <ons-list-header>おみくじ結果</ons-list-header>
         <pre id="result">
         </pre>
       </ons-list>
